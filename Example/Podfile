@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'PencilBoard_Example' do
+  pod 'PencilBoard', :path => '../'
+
+  target 'PencilBoard_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

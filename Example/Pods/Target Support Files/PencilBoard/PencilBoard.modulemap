@@ -1,0 +1,6 @@
+framework module PencilBoard {
+  umbrella header "PencilBoard-umbrella.h"
+
+  export *
+  module * { export * }
+}

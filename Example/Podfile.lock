@@ -1,0 +1,16 @@
+PODS:
+  - PencilBoard (0.1.0)
+
+DEPENDENCIES:
+  - PencilBoard (from `../`)
+
+EXTERNAL SOURCES:
+  PencilBoard:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PencilBoard: bab721f52a208b18c25a99a0e141aee9ceb3fe0b
+
+PODFILE CHECKSUM: 87d72b8ee0d34220abc87691c6fce3de32380ade
+
+COCOAPODS: 1.5.3

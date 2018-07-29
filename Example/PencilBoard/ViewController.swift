@@ -21,12 +21,13 @@ class ViewController: UIViewController {
         
         print("test")
         
+        pencilBoard.brush =  Brush(strokeWidth: pencilBoard.defaulWidth, strokeColor: UIColor.red.cgColor)
         
-        pencilBoard.testDraw()
         
-        print(pencilBoard.layer.frame)
-                
+        
+        
     }
+
 
 }
 

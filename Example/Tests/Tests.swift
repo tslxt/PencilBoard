@@ -17,8 +17,6 @@ class Tests: XCTestCase {
         // This is an example of a functional test case.
         XCTAssert(true, "Pass")
         
-        let testView = PencilBoard()
-        testView.testDraw()
     }
     
     func testPerformanceExample() {

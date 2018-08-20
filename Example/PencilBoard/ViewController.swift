@@ -11,7 +11,11 @@ import UIKit
 import PencilBoard
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, PencilBoardDelegate {
+    func BoardStateChange(state: DrawingState) {
+        print(state)
+    }
+    
 
     
     @IBOutlet weak var pencilBoard: PencilBoard!
@@ -23,7 +27,7 @@ class ViewController: UIViewController {
         
         pencilBoard.brush =  Brush(strokeWidth: pencilBoard.defaulWidth, strokeColor: UIColor.red.cgColor)
         
-        
+        pencilBoard.delegate = self
         
         
     }

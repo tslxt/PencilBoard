@@ -12,7 +12,13 @@ public enum DrawingState {
     case Began, Moved, Ended, ReDraw
 }
 
+public protocol PencilBoardDelegate {
+    func BoardStateChange(state: DrawingState)
+}
+
 public class PencilBoard: UIImageView {
+    
+    public var delegate:PencilBoardDelegate! = nil
     
     public var brush:BaseBrush?
     
@@ -25,7 +31,19 @@ public class PencilBoard: UIImageView {
     
     private var realImage: UIImage?
     
-    private var drawingState:DrawingState!
+    private var currentState:DrawingState! = nil
+    
+    private var drawingState:DrawingState {
+        get {
+            return currentState
+        }
+        set {
+            currentState = newValue
+            delegate.BoardStateChange(state: currentState)
+        }
+    }
+    
+    private var undoImages = [UIImage]()
 
 
     public func drawingWithTouch(touch: UITouch) {
@@ -107,6 +125,12 @@ public class PencilBoard: UIImageView {
         
         UIGraphicsEndImageContext()
         
+        if self.drawingState == DrawingState.Began {
+            if self.image != nil {
+                self.undoImages.append(self.image!)
+            }
+        }
+        
         self.image = previewImage
     }
     
@@ -156,5 +180,26 @@ public class PencilBoard: UIImageView {
                 self.drawingWithTouch(touch: touch)
             }
         }
+    }
+    
+    private var canUndo: Bool {
+        get {
+            return self.undoImages.count > 0
+        }
+    }
+    
+    public func undo() {
+        if self.undoImages.count > 0 {
+            let lastImage = self.undoImages.removeLast()
+            self.image = lastImage
+        }
+        
+        self.realImage = self.image
+    }
+    
+    public func clear() {
+        self.image = nil
+        self.undoImages = []
+        self.realImage = self.image
     }
 }

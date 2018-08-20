@@ -12,10 +12,11 @@
 		15C6AC38C7EA8451CCF82EB073A83B71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		2062162E930FDD2865675F9FAC0432AA /* Pods-PencilBoard_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D876B609874BF6EEFCBE820030DAB40 /* Pods-PencilBoard_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		484CF29371539DD51B840BC81605DA75 /* Pods-PencilBoard_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 629CFB3169D9F959C7A4B2FE8C4352D7 /* Pods-PencilBoard_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A5115134210DFB5000193669 /* PencilBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5115130210DFB5000193669 /* PencilBoard.swift */; };
 		A5115135210DFB5000193669 /* BaseBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5115131210DFB5000193669 /* BaseBrush.swift */; };
 		A5115136210DFB5000193669 /* LineBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5115132210DFB5000193669 /* LineBrush.swift */; };
 		A5115137210DFB5000193669 /* Brush.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5115133210DFB5000193669 /* Brush.swift */; };
+		A534C1AF212A76F400194F37 /* CircleBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = A534C1AE212A76F400194F37 /* CircleBrush.swift */; };
+		A534C1B1212A773C00194F37 /* PencilBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A534C1B0212A773C00194F37 /* PencilBoard.swift */; };
 		A864B705B77A1ED850455C7CAF1666D8 /* PencilBoard-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DAEAAD487CD66E7DB85204F66D71BE1 /* PencilBoard-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3E40CE62F841B9BAB1FB45B0AA4B66C /* PencilBoard-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 039FB1BDF4ECAD0D97563E59AC615F26 /* PencilBoard-dummy.m */; };
 		C65B253813F228B30ABA0AF10DC9BA6D /* Pods-PencilBoard_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8C9B698C4AB9433D99B0CFAE2A1A38 /* Pods-PencilBoard_Tests-dummy.m */; };
@@ -66,10 +67,11 @@
 		9583FB391FB98F67F9208839AA124976 /* Pods_PencilBoard_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PencilBoard_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DAB8F53AF69758AEAD58E46E9E4BCD3 /* Pods_PencilBoard_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PencilBoard_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F3E7526F30C8CCF1F464F6D0347DFA4 /* PencilBoard.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PencilBoard.xcconfig; sourceTree = "<group>"; };
-		A5115130210DFB5000193669 /* PencilBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PencilBoard.swift; path = PencilBoard/Classes/PencilBoard.swift; sourceTree = "<group>"; };
 		A5115131210DFB5000193669 /* BaseBrush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseBrush.swift; path = PencilBoard/Classes/graphics/BaseBrush.swift; sourceTree = "<group>"; };
 		A5115132210DFB5000193669 /* LineBrush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineBrush.swift; path = PencilBoard/Classes/graphics/LineBrush.swift; sourceTree = "<group>"; };
 		A5115133210DFB5000193669 /* Brush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Brush.swift; path = PencilBoard/Classes/graphics/Brush.swift; sourceTree = "<group>"; };
+		A534C1AE212A76F400194F37 /* CircleBrush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleBrush.swift; sourceTree = "<group>"; };
+		A534C1B0212A773C00194F37 /* PencilBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PencilBoard.swift; sourceTree = "<group>"; };
 		AD3967C5AE805ED6C3114974FD59FD1D /* Pods-PencilBoard_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PencilBoard_Example.release.xcconfig"; sourceTree = "<group>"; };
 		AFDE475EFE5E43B7DD818CCFBA3DB812 /* Pods-PencilBoard_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PencilBoard_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D323264D8BF57BB7EB07603429E3DD1A /* PencilBoard.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PencilBoard.modulemap; sourceTree = "<group>"; };
@@ -111,10 +113,11 @@
 		125967DD2472E6FFEE08DA58B5EA2E12 /* PencilBoard */ = {
 			isa = PBXGroup;
 			children = (
+				A534C1B0212A773C00194F37 /* PencilBoard.swift */,
+				A534C1AE212A76F400194F37 /* CircleBrush.swift */,
 				A5115131210DFB5000193669 /* BaseBrush.swift */,
 				A5115133210DFB5000193669 /* Brush.swift */,
 				A5115132210DFB5000193669 /* LineBrush.swift */,
-				A5115130210DFB5000193669 /* PencilBoard.swift */,
 				F68ECCACA3D1FEB1A17AE223775C34D8 /* Pod */,
 				3C4DAC8DD19FEFD478B52669ACC25227 /* Support Files */,
 			);
@@ -373,10 +376,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5115134210DFB5000193669 /* PencilBoard.swift in Sources */,
+				A534C1AF212A76F400194F37 /* CircleBrush.swift in Sources */,
 				A5115137210DFB5000193669 /* Brush.swift in Sources */,
 				C3E40CE62F841B9BAB1FB45B0AA4B66C /* PencilBoard-dummy.m in Sources */,
 				A5115136210DFB5000193669 /* LineBrush.swift in Sources */,
+				A534C1B1212A773C00194F37 /* PencilBoard.swift in Sources */,
 				A5115135210DFB5000193669 /* BaseBrush.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
